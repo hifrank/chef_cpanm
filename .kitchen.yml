@@ -12,7 +12,11 @@ platforms:
 suites:
   - name: default
     run_list:
-      - recipe[chef_cpanm::default]
+      - recipe[cpanm::default]
     attributes:
       cpanm:
         install_from: file
+  - name: source
+    run_list:
+      - recipe[cpanm::source]
+    attributes:
