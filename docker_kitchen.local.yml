@@ -5,12 +5,17 @@ driver:
   name: docker
 
 platforms:
-- name: centos-chef10
+- name: centos-6.4-chef10
   driver_config:
     image: centos
     platform: rhel
     require_chef_omnibus: 10.24.0
-- name: centos-chef11
+- name: centos-6.4-chef11
   driver_config:
     image: centos
     platform: rhel
+- name: centos-5.9-chef10
+  driver_config:
+    image: backjlack/centos:5.9
+    platform: rhel
+    require_chef_omnibus: 10.24.0
