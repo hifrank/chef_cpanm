@@ -1,6 +1,6 @@
 name             'cpanm'
 maintainer       'htc'
-maintainer_email 'frank_chen@htc.com'
+maintainer_email 'hifrankc@gmail.com'
 license          'All rights reserved'
 description      'Installs/Configures cpanminus'
 long_description IO.read(File.join(File.dirname(__FILE__), 'README.md'))
