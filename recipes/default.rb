@@ -8,6 +8,9 @@
 #
 if platform?('centos')
   package "perl-ExtUtils-MakeMaker"
+  # some cpam need gcc & openssl for compile & test.
+  package "gcc"
+  package "openssl-devel"
 end
 
 cookbook_file "cpanm" do
