@@ -1,5 +1,5 @@
 name             'cpanm'
-maintainer       'htc'
+maintainer       'frank chen'
 maintainer_email 'hifrankc@gmail.com'
 license          'All rights reserved'
 description      'Installs/Configures cpanminus'
