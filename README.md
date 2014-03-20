@@ -26,7 +26,7 @@ Attributes
     <td><tt>['cpanm']['install_from']</tt></td>
     <td>String</td>
     <td>install cpanm with "file" or "source", if you choose install from source, cpanm will install by node['cpanm']['install_source_url']</td>
-    <td><tt>file/source</tt></td>
+    <td><tt>file</tt></td>
   </tr>
   <tr>
     <td><tt>['cpanm']['install_source_url']</tt></td>
@@ -52,6 +52,13 @@ Just include `cpanm` in your node's `run_list`:
     "recipe[cpanm]"
   ]
 }
+```
+then use definition to install your cpan, eg:
+```
+cpanm_package do
+  packages ["Net::SSLeay"]
+end
+
 ```
 
 #### cpanm::source
