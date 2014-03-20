@@ -9,7 +9,7 @@ describe_recipe "cpanm::source" do
 
 
   it "cpanm must excutable" do
-    file("/usr/bin/cpanm").must_have("0755").with(:owner, "root").and(:group, "root")
+    file("/usr/bin/cpanm").must_have(:mode, "0755").with(:owner, "root").and(:group, "root")
   end
 
 end
