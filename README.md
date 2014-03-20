@@ -39,41 +39,15 @@ Attributes
 
 Usage
 -----
-#### cpanm::default
-install cpanm from file.
 
-e.g.
-Just include `cpanm` in your node's `run_list`:
+use definition to install your cpan, eg:
 
-```json
-{
-  "name":"my_node",
-  "run_list": [
-    "recipe[cpanm]"
-  ]
-}
 ```
-then use definition to install your cpan, eg:
-```
+include_recipe "cpanm"
 cpanm_package do
   packages ["Net::SSLeay"]
 end
 
-```
-
-#### cpanm::source
-install cpanm from source.
-
-e.g.
-Just include `cpanm::source` in your node's `run_list`:
-
-```json
-{
-  "name":"my_node",
-  "run_list": [
-    "recipe[cpanm::source]"
-  ]
-}
 ```
 
 Contributing
