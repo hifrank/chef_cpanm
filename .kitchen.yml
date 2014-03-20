@@ -12,11 +12,13 @@ platforms:
 suites:
   - name: default
     run_list:
-      - recipe[cpanm::default]
+      - recipe[cpanm_test::default]
+      - recipe[minitest-handler]
     attributes:
       cpanm:
         install_from: file
   - name: source
     run_list:
-      - recipe[cpanm::source]
+      - recipe[cpanm_test::source]
+      - recipe[minitest-handler]
     attributes:
