@@ -1,0 +1,16 @@
+---
+driver_plugin: docker
+
+driver:
+  name: docker
+
+platforms:
+- name: centos-chef10
+  driver_config:
+    image: centos
+    platform: rhel
+    require_chef_omnibus: 10.24.0
+- name: centos-chef11
+  driver_config:
+    image: centos
+    platform: rhel
