@@ -12,7 +12,8 @@ bash "install cpanm from source" do
   cwd  node['cpanm']['install_path']
   code <<-EOH
     curl -LO #{node['cpanm']['install_source_url']}
-    chmod +x cpanm
+    chmod 0755 cpanm
+    chown root:root cpanm
   EOH
   not_if do ::File.exists?("#{node['cpanm']['install_path']}/cpanm") end
 end

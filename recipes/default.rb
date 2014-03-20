@@ -13,6 +13,7 @@ end
 cookbook_file "cpanm" do
   mode "0755"
   owner "root"
+  group "root"
   path "#{node['cpanm']['install_path']}/cpanm"
   action :create_if_missing
   not_if { node['cpanm']['install_from'] == 'source' }
