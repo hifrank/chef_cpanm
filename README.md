@@ -1,7 +1,7 @@
 chef_cpanm Cookbook
 ===================
-use cpanminus to install cpan packages.
-currently just test on centos.
+use cpanminus to install cpan packages according to https://metacpan.org/pod/App%3a%3acpanminus#Downloading-the-standalone-executable
+currently just test on centos 6.4.
 
 Requirements
 ------------
@@ -17,11 +17,24 @@ Attributes
     <th>Default</th>
   </tr>
   <tr>
-    <td><tt>['cpanm']['bacon']</tt></td>
-    <td>Boolean</td>
-    <td>whether to include bacon</td>
-    <td><tt>true</tt></td>
+    <td><tt>['cpanm']['install_path']</tt></td>
+    <td>String</td>
+    <td>where to install cpanm</td>
+    <td><tt>/usr/bin</tt></td>
   </tr>
+  <tr>
+    <td><tt>['cpanm']['install_from']</tt></td>
+    <td>String</td>
+    <td>install cpanm with "file" or "source", if you choose install from source, cpanm will install by node['cpanm']['install_source_url']</td>
+    <td><tt>file/source</tt></td>
+  </tr>
+  <tr>
+    <td><tt>['cpanm']['install_source_url']</tt></td>
+    <td>String</td>
+    <td>url for binary source, please refer to https://metacpan.org/pod/App%3a%3acpanminus#Downloading-the-standalone-executable</td>
+    <td><tt>http://xrl.us/cpanm</tt></td>
+  </tr>
+
 </table>
 
 Usage
