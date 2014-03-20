@@ -1,7 +1,10 @@
 chef_cpanm Cookbook
 ===================
 use cpanminus to install cpan packages according to https://metacpan.org/pod/App%3a%3acpanminus#Downloading-the-standalone-executable
-currently just test on centos 6.4.
+currently just test on centos 6.4 & centos 5.9 with kitchen docker.
+
+centos 6.4: https://index.docker.io/_/centos/
+centos 5.9: https://index.docker.io/u/backjlack/centos/
 
 Requirements
 ------------
