@@ -11,6 +11,7 @@ if platform?('centos')
   package "gcc"
   package "openssl-devel"
   package "make"
+  package "perl" 
 
   if 6 == node['platform_version'].to_i
     package "perl-ExtUtils-MakeMaker" 
